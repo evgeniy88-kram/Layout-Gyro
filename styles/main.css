@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+body {
+  margin: 0 auto !important;
+  max-width: 1600px;
+  box-shadow: 0 0 5px 5px #cccccc;
+  font-family: "Lato", sans-serif;
+}
+
+.header {
+  height: 600px;
+}
+.header__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 20px;
+  margin: 0 0 60px;
+}
+.header__navbar svg {
+  width: 70px;
+  height: 70px;
+}
+.header__navbar a {
+  text-decoration: none;
+  color: #000000;
+}
+.header__navbar--logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__navbar--logo span {
+  margin-left: 15px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.header__navbar nav a {
+  margin-right: 30px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.header__content {
+  width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.header__content__left {
+  position: relative;
+  margin-top: 60px;
+}
+.header__content__left h2 {
+  font-size: 204px;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+.header__content__left img {
+  position: absolute;
+  top: 130px;
+  left: -40px;
+}
+.header__content__right {
+  margin-left: 120px;
+  position: relative;
+}
+.header__content__right h3 {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 0 25px;
+}
+.header__content__right p {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 25px;
+  margin: 0;
+}
+.header__content__right__btn {
+  cursor: pointer;
+  margin-top: 25px;
+  background: #FFCD00;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__content__right__btn a {
+  text-decoration: none;
+  color: #000000;
+}
+.header__content__right__img {
+  background: url("../img/header_img2.jpg");
+  position: absolute;
+  top: 320px;
+  left: 55px;
+  width: 261px;
+  height: 247px;
+}
+
+.super__content {
+  display: flex;
+}
+.super__content__left {
+  margin-top: 50px;
+  margin-right: 160px;
+  position: relative;
+  width: 1080px;
+}
+.super__content__left__desc {
+  width: 465px;
+  margin-left: 220px;
+}
+.super__content__left__desc h3 {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 0 25px;
+}
+.super__content__left__desc p {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 25px;
+  margin: 0;
+}
+.super__content__left__desc__btn {
+  cursor: pointer;
+  margin-top: 25px;
+  background: #FFCD00;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.super__content__left__desc__btn a {
+  text-decoration: none;
+  color: #000000;
+}
+.super__content__left img {
+  position: absolute;
+  z-index: -1;
+  top: 340px;
+  left: 220px;
+}
+.super__content__left__facts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 380px;
+}
+.super__content__left__facts div:nth-child(1) {
+  height: 210px;
+  width: 455px;
+  display: flex;
+  background: #262628;
+  color: #ffffff;
+  margin-right: 2px;
+}
+.super__content__left__facts div:nth-child(1) section {
+  height: 210px;
+  margin-left: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.super__content__left__facts div:nth-child(1) section p {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+.super__content__left__facts div:nth-child(2), .super__content__left__facts div:nth-child(3), .super__content__left__facts div:nth-child(4) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 230px;
+  height: 145px;
+  background: #E7E7E7;
+  margin: 65px 2px 0;
+}
+.super__content__left__facts div:nth-child(2) h3, .super__content__left__facts div:nth-child(3) h3, .super__content__left__facts div:nth-child(4) h3 {
+  font-size: 45px;
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+.super__content__left__facts div:nth-child(2) span, .super__content__left__facts div:nth-child(3) span, .super__content__left__facts div:nth-child(4) span {
+  font-size: 12px;
+  font-weight: 300;
+}
+.super__content__right {
+  position: relative;
+}
+.super__content__right img {
+  position: absolute;
+  z-index: -2;
+  left: -430px;
+}
+
+.ultra {
+  background: url("../img/ultra-bg.jpg");
+}
+
+/*# sourceMappingURL=main.css.map */
