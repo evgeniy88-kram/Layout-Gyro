@@ -232,7 +232,7 @@ body {
 }
 
 .ultra {
-  background: url("../img/ultra-bg.jpg");
+  background: url("../img/ultra-bg.jpg") no-repeat;
   height: 800px;
 }
 .ultra__content {
