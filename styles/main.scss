@@ -5,6 +5,7 @@ body {
   max-width: 1600px;
   box-shadow: 0 0 5px 5px #cccccc;
   font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
 }
 .header {
   height: 600px;
@@ -59,6 +60,9 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 1024px) {
+      width: 900px;
+    }
     &__left {
       position: relative;
       margin-top: 60px;
@@ -67,11 +71,18 @@ body {
         font-weight: 900;
         text-align: center;
         margin: 0;
+        @media screen and (max-width: 1024px) {
+          font-size: 150px;
+        }
       }
       img {
         position: absolute;
         top: 130px;
         left: -40px;
+        @media screen and (max-width: 1024px) {
+          width: 500px;
+          top: 100px;
+        }
       }
     }
     &__right {
@@ -116,6 +127,10 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (max-width: 1024px) {
+          width: 211px;
+          height: 200px;
+        }
         svg {
           display: none;
           fill: #ffffff;
@@ -141,6 +156,13 @@ body {
       &__desc {
         width: 465px;
         margin-left: 220px;
+        @media screen and (max-width: 1440px) {
+          margin-left: 120px;
+        }
+        @media screen and (max-width: 1024px) {
+          margin-left: 80px;
+          width: 420px;
+        }
         h3 {
           font-size: 30px;
           font-weight: 400;
@@ -176,11 +198,21 @@ body {
         z-index: -1;
         top: 340px;
         left: 220px;
+        @media screen and (max-width: 1440px) {
+          left: 60px;
+        }
+        @media screen and (max-width: 1024px) {
+          width: 700px;
+          top: 270px;
+        }
       }
       &__facts {
         display: flex;
         justify-content: space-between;
         margin-top: 380px;
+        @media screen and (max-width: 1024px) {
+          margin-top: 290px;
+        }
         div:nth-child(1) {
           height: 210px;
           width: 455px;
@@ -188,6 +220,9 @@ body {
           background: #262628;
           color: #ffffff;
           margin-right: 2px;
+          @media screen and (max-width: 1024px) {
+            width: 380px;
+          }
           section {
             height: 210px;
             margin-left: 260px;
@@ -195,6 +230,9 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
+            @media screen and (max-width: 1024px) {
+              margin-left: 230px;
+            }
             p {
               font-size: 32px;
               font-weight: 700;
@@ -211,6 +249,9 @@ body {
           height: 145px;
           background: #E7E7E7;
           margin: 65px 2px 0;
+          @media screen and (max-width: 1440px) {
+            width: 210px;
+          }
           h3 {
             font-size: 45px;
             font-weight: 400;
@@ -229,13 +270,29 @@ body {
         position: absolute;
         z-index: -2;
         left: -430px;
+        @media screen and (max-width: 1440px) {
+          left: -590px;
+        }
+        @media screen and (max-width: 1024px) {
+          width: 500px;
+          left: -660px;
+        }
       }
     }
   }
 }
 .ultra {
   background: url("../img/ultra-bg.jpg") no-repeat;
+  background-size: cover;
   height: 800px;
+  @media screen and (max-width: 1440px) {
+    background: url("../img/ultra-1440-bg.jpg") no-repeat;
+    height: 740px;
+  }
+  @media screen and (max-width: 1024px) {
+    background: url("../img/ultra-1024-bg.jpg") no-repeat;
+    height: 526px;
+  }
   &__content {
     display: flex;
     align-items: center;
@@ -290,7 +347,16 @@ body {
   }
 }
 .network {
-  background: url("../img/network-bg.jpg");
+  background: url("../img/network-bg.jpg") no-repeat;
+  background-size: cover;
+  @media screen and (max-width: 1440px) {
+    background: url("../img/network-1440-bg.jpg") no-repeat;
+    background-size: cover;
+  }
+  @media screen and (max-width: 1024px) {
+    background: url("../img/network-1024-bg.jpg") no-repeat;
+    background-size: cover;
+  }
   h2 {
     text-align: center;
     padding-top: 60px;
@@ -301,6 +367,10 @@ body {
     svg {
       margin-right: 30px;
     }
+    @media screen and (max-width: 1440px) {
+      padding-top: 40px;
+      margin: 0 0 27px;
+    }
   }
   &__content {
     width: 1150px;
@@ -308,6 +378,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    @media screen and (max-width: 1024px) {
+      width: 1000px;
+    }
     h4, p {
       color: #ffffff;
       font-weight: 400;
@@ -395,12 +468,25 @@ body {
 }
 .slipstream {
   background: url("../img/slipsrteam-bg.jpg") no-repeat;
+  background-size: cover;
   height: 345px;
+  @media screen and (max-width: 1440px) {
+    background: url("../img/slipsrteam-1440-bg.jpg") no-repeat;
+    background-size: cover;
+    height: 310px;
+  }
+  @media screen and (max-width: 1024px) {
+    background: url("../img/slipsrteam-1024-bg.jpg") no-repeat;
+    background-size: cover;
+  }
   &__content {
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding-top: 45px;
+    @media screen and (max-width: 1440px) {
+      padding-top: 20px;
+    }
     &__left, &__right {
       width: 465px;
     }
@@ -450,8 +536,19 @@ body {
   }
 }
 .balance {
-  background: url("../img/balance-bg.jpg");
+  background: url("../img/balance-bg.jpg") no-repeat;
+  background-size: cover;
   height: 345px;
+  @media screen and (max-width: 1440px) {
+    background: url("../img/balance-1440-bg.jpg") no-repeat;
+    background-size: cover;
+    height: 310px;
+  }
+  @media screen and (max-width: 1024px) {
+    background: url("../img/balance-1024-bg.jpg") no-repeat;
+    background-size: cover;
+    height: 290px;
+  }
   &__content {
     width: 1300px;
     margin: 0 auto;
@@ -460,6 +557,9 @@ body {
     align-items: center;
     padding-top: 65px;
     color: #ffffff;
+    @media screen and (max-width: 1024px) {
+      width: 960px;
+    }
     &__left, &__right {
       height: 250px;
       width: 500px;

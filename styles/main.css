@@ -4,6 +4,7 @@ body {
   max-width: 1600px;
   box-shadow: 0 0 5px 5px #cccccc;
   font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -59,6 +60,11 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 1024px) {
+  .header__content {
+    width: 900px;
+  }
+}
 .header__content__left {
   position: relative;
   margin-top: 60px;
@@ -69,10 +75,21 @@ body {
   text-align: center;
   margin: 0;
 }
+@media screen and (max-width: 1024px) {
+  .header__content__left h2 {
+    font-size: 150px;
+  }
+}
 .header__content__left img {
   position: absolute;
   top: 130px;
   left: -40px;
+}
+@media screen and (max-width: 1024px) {
+  .header__content__left img {
+    width: 500px;
+    top: 100px;
+  }
 }
 .header__content__right {
   margin-left: 120px;
@@ -118,6 +135,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 1024px) {
+  .header__content__right__img {
+    width: 211px;
+    height: 200px;
+  }
+}
 .header__content__right__img svg {
   display: none;
   fill: #ffffff;
@@ -141,6 +164,17 @@ body {
 .super__content__left__desc {
   width: 465px;
   margin-left: 220px;
+}
+@media screen and (max-width: 1440px) {
+  .super__content__left__desc {
+    margin-left: 120px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .super__content__left__desc {
+    margin-left: 80px;
+    width: 420px;
+  }
 }
 .super__content__left__desc h3 {
   font-size: 30px;
@@ -177,10 +211,26 @@ body {
   top: 340px;
   left: 220px;
 }
+@media screen and (max-width: 1440px) {
+  .super__content__left img {
+    left: 60px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .super__content__left img {
+    width: 700px;
+    top: 270px;
+  }
+}
 .super__content__left__facts {
   display: flex;
   justify-content: space-between;
   margin-top: 380px;
+}
+@media screen and (max-width: 1024px) {
+  .super__content__left__facts {
+    margin-top: 290px;
+  }
 }
 .super__content__left__facts div:nth-child(1) {
   height: 210px;
@@ -190,6 +240,11 @@ body {
   color: #ffffff;
   margin-right: 2px;
 }
+@media screen and (max-width: 1024px) {
+  .super__content__left__facts div:nth-child(1) {
+    width: 380px;
+  }
+}
 .super__content__left__facts div:nth-child(1) section {
   height: 210px;
   margin-left: 260px;
@@ -197,6 +252,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+@media screen and (max-width: 1024px) {
+  .super__content__left__facts div:nth-child(1) section {
+    margin-left: 230px;
+  }
 }
 .super__content__left__facts div:nth-child(1) section p {
   font-size: 32px;
@@ -212,6 +272,11 @@ body {
   height: 145px;
   background: #E7E7E7;
   margin: 65px 2px 0;
+}
+@media screen and (max-width: 1440px) {
+  .super__content__left__facts div:nth-child(2), .super__content__left__facts div:nth-child(3), .super__content__left__facts div:nth-child(4) {
+    width: 210px;
+  }
 }
 .super__content__left__facts div:nth-child(2) h3, .super__content__left__facts div:nth-child(3) h3, .super__content__left__facts div:nth-child(4) h3 {
   font-size: 45px;
@@ -230,10 +295,34 @@ body {
   z-index: -2;
   left: -430px;
 }
+@media screen and (max-width: 1440px) {
+  .super__content__right img {
+    left: -590px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .super__content__right img {
+    width: 500px;
+    left: -660px;
+  }
+}
 
 .ultra {
   background: url("../img/ultra-bg.jpg") no-repeat;
+  background-size: cover;
   height: 800px;
+}
+@media screen and (max-width: 1440px) {
+  .ultra {
+    background: url("../img/ultra-1440-bg.jpg") no-repeat;
+    height: 740px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .ultra {
+    background: url("../img/ultra-1024-bg.jpg") no-repeat;
+    height: 526px;
+  }
 }
 .ultra__content {
   display: flex;
@@ -289,7 +378,20 @@ body {
 }
 
 .network {
-  background: url("../img/network-bg.jpg");
+  background: url("../img/network-bg.jpg") no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 1440px) {
+  .network {
+    background: url("../img/network-1440-bg.jpg") no-repeat;
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .network {
+    background: url("../img/network-1024-bg.jpg") no-repeat;
+    background-size: cover;
+  }
 }
 .network h2 {
   text-align: center;
@@ -302,12 +404,23 @@ body {
 .network h2 svg {
   margin-right: 30px;
 }
+@media screen and (max-width: 1440px) {
+  .network h2 {
+    padding-top: 40px;
+    margin: 0 0 27px;
+  }
+}
 .network__content {
   width: 1150px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+@media screen and (max-width: 1024px) {
+  .network__content {
+    width: 1000px;
+  }
 }
 .network__content h4, .network__content p {
   color: #ffffff;
@@ -395,13 +508,32 @@ body {
 
 .slipstream {
   background: url("../img/slipsrteam-bg.jpg") no-repeat;
+  background-size: cover;
   height: 345px;
+}
+@media screen and (max-width: 1440px) {
+  .slipstream {
+    background: url("../img/slipsrteam-1440-bg.jpg") no-repeat;
+    background-size: cover;
+    height: 310px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .slipstream {
+    background: url("../img/slipsrteam-1024-bg.jpg") no-repeat;
+    background-size: cover;
+  }
 }
 .slipstream__content {
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding-top: 45px;
+}
+@media screen and (max-width: 1440px) {
+  .slipstream__content {
+    padding-top: 20px;
+  }
 }
 .slipstream__content__left, .slipstream__content__right {
   width: 465px;
@@ -447,8 +579,23 @@ body {
 }
 
 .balance {
-  background: url("../img/balance-bg.jpg");
+  background: url("../img/balance-bg.jpg") no-repeat;
+  background-size: cover;
   height: 345px;
+}
+@media screen and (max-width: 1440px) {
+  .balance {
+    background: url("../img/balance-1440-bg.jpg") no-repeat;
+    background-size: cover;
+    height: 310px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .balance {
+    background: url("../img/balance-1024-bg.jpg") no-repeat;
+    background-size: cover;
+    height: 290px;
+  }
 }
 .balance__content {
   width: 1300px;
@@ -458,6 +605,11 @@ body {
   align-items: center;
   padding-top: 65px;
   color: #ffffff;
+}
+@media screen and (max-width: 1024px) {
+  .balance__content {
+    width: 960px;
+  }
 }
 .balance__content__left, .balance__content__right {
   height: 250px;
