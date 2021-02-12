@@ -12,12 +12,22 @@ body {
   @media screen and (max-width: 768px) {
     height: 560px;
   }
+  @media screen and (max-width: 430px) {
+    height: 800px;
+  }
   &__navbar {
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding-top: 20px;
     margin: 0 0 60px;
+    @media screen and (max-width: 430px) {
+      position: fixed;
+      height: 90px;
+      width: 100%;
+      z-index: 7;
+      background: $gyroColor;
+    }
     svg {
       width: 70px;
       height: 70px;
@@ -31,6 +41,10 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @media screen and (max-width: 430px) {
+        top: -10px;
+        left: -110px;
+      }
       span {
         margin-left: 15px;
         font-size: 24px;
@@ -38,6 +52,9 @@ body {
       }
     }
     nav {
+      @media screen and (max-width: 430px) {
+        display: none;
+      }
       a {
         margin-right: 30px;
         font-size: 20px;
@@ -58,6 +75,81 @@ body {
       }
     }
   }
+  #hamburger {
+    display: none;
+    & + label {
+      display: none;
+      width: 42px;
+      height: 42px;
+      @media screen and (max-width: 430px) {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 55px;
+        right: 30px;
+      }
+      span {
+        width: 30px;
+        height: 3px;
+        background: #000000;
+        display: block;
+        position: relative;
+        margin: auto;
+        transition: .5s;
+        &:before, &:after {
+          transition: .5s;
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          display: block;
+          background: #000000;
+        }
+        &:before {
+          top: -10px;
+        }
+        &:after {
+          bottom: -10px;
+        }
+      }
+    }
+    &:checked + label {
+      span {
+        background: transparent;
+        transform: rotate(180deg);
+        &:before, &:after {
+          top: 50%;
+          bottom: initial;
+          width: 110%;
+          background: #000000;
+        }
+        &:before {
+          transform: rotate(45deg);
+        }
+        &:after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    height: 280px;
+    top: 110px;
+    right: 0;
+    left: 0;
+    background: $gyroColor;
+    overflow: auto;
+    z-index: 6;
+    a {
+      margin: 15px 0;
+    }
+  }
   &__content {
     width: 1080px;
     margin: 0 auto;
@@ -70,9 +162,21 @@ body {
       width: 700px;
       justify-content: space-around;
     }
+    @media screen and (max-width: 430px) {
+      padding-top: 130px;
+      width: 400px;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media screen and (max-width: 380px) {
+      width: 320px;
+    }
     &__left {
       position: relative;
       margin-top: 60px;
+      @media screen and (max-width: 430px) {
+        margin: 0;
+      }
       h2 {
         font-size: 204px;
         font-weight: 900;
@@ -98,6 +202,9 @@ body {
           top: 55px;
           left: -45px;
         }
+        @media screen and (max-width: 380px) {
+          left: -55px;
+        }
       }
     }
     &__right {
@@ -107,12 +214,18 @@ body {
         margin-left: 70px;
         width: 300px;
       }
+      @media screen and (max-width: 430px) {
+        margin: 90px 0 0 0;
+      }
       h3 {
         font-size: 30px;
         font-weight: 400;
         margin: 0 0 25px;
         @media screen and (max-width: 768px) {
           font-size: 24px;
+        }
+        @media screen and (max-width: 430px) {
+         text-align: center;
         }
       }
       p {
@@ -138,6 +251,9 @@ body {
           width: 140px;
           height: 40px;
           margin-top: 20px;
+        }
+        @media screen and (max-width: 430px) {
+          margin: 10px auto;
         }
         a {
           text-decoration: none;
@@ -168,6 +284,10 @@ body {
           top: 310px;
           left: 0;
         }
+        @media screen and (max-width: 430px) {
+          right: 0;
+          margin: 0 auto;
+        }
         svg {
           display: none;
           fill: #ffffff;
@@ -189,6 +309,9 @@ body {
 .super {
   &__content {
     display: flex;
+    @media screen and (max-width: 430px) {
+      flex-direction: column;
+    }
     &__left {
       margin-top: 50px;
       margin-right: 160px;
@@ -200,6 +323,13 @@ body {
       }
       @media screen and (max-width: 768px) {
         width: 768px;
+      }
+      @media screen and (max-width: 430px) {
+        width: 400px;
+        margin: 30px auto 0;
+      }
+      @media screen and (max-width: 380px) {
+        width: 300px;
       }
       &__desc {
         width: 465px;
@@ -215,12 +345,18 @@ body {
           margin-left: 70px;
           width: 300px;
         }
+        @media screen and (max-width: 430px) {
+          margin: 0 auto;
+        }
         h3 {
           font-size: 30px;
           font-weight: 400;
           margin: 0 0 25px;
           @media screen and (max-width: 768px) {
             font-size: 24px;
+          }
+          @media screen and (max-width: 430px) {
+            text-align: center;
           }
         }
         p {
@@ -247,6 +383,9 @@ body {
             height: 40px;
             margin-top: 20px;
           }
+          @media screen and (max-width: 430px) {
+            margin: 20px auto;
+          }
           a {
             text-decoration: none;
             color: #000000;
@@ -272,16 +411,33 @@ body {
           width: 530px;
           top: 230px;
         }
+        @media screen and (max-width: 430px) {
+          width: 350px;
+          top: 240px;
+          right: 0;
+          left: 0;
+          margin: 0 auto;
+        }
+        @media screen and (max-width: 380px) {
+          width: 300px;
+        }
       }
       &__facts {
         display: flex;
         justify-content: space-between;
         margin-top: 450px;
         @media screen and (max-width: 1024px) {
-          margin-top: 290px;
+          margin-top: 292px;
         }
         @media screen and (max-width: 768px) {
           margin-top: 192px;
+        }
+        @media screen and (max-width: 430px) {
+          margin-top: 200px;
+          width: 99%;
+        }
+        @media screen and (max-width: 380px) {
+          width: 300px;
         }
         div:nth-child(1) {
           height: 210px;
@@ -297,6 +453,13 @@ body {
             width: 250px;
             height: 180px;
           }
+          @media screen and (max-width: 430px) {
+            width: 235px;
+            height: 100px;
+          }
+          @media screen and (max-width: 380px) {
+            display: none;
+          }
           section {
             height: 210px;
             margin-left: 260px;
@@ -311,12 +474,21 @@ body {
               margin-left: 160px;
               height: 180px;
             }
+            @media screen and (max-width: 430px) {
+              margin: 0;
+              height: 100px;
+              flex-direction: row;
+            }
             p {
               font-size: 32px;
               font-weight: 700;
               margin: 0;
               @media screen and (max-width: 768px) {
                 font-size: 28px;
+              }
+              @media screen and (max-width: 430px) {
+                font-size: 12px;
+                margin: auto 5px;
               }
             }
           }
@@ -337,6 +509,14 @@ body {
             width: 168px;
             height: 115px;
           }
+          @media screen and (max-width: 430px) {
+            height: 100px;
+            margin: 0 2px;
+          }
+          @media screen and (max-width: 380px) {
+            width: 90px;
+            height: 100px;
+          }
           h3 {
             font-size: 45px;
             font-weight: 400;
@@ -344,12 +524,16 @@ body {
             @media screen and (max-width: 768px) {
               font-size: 36px;
             }
+            @media screen and (max-width: 430px) {
+              font-size: 24px;
+            }
           }
           span {
             font-size: 12px;
             font-weight: 300;
             @media screen and (max-width: 768px) {
-              font-size: 10px;
+              font-size: 12px;
+              text-align: center;
             }
           }
         }
@@ -357,6 +541,9 @@ body {
     }
     &__right {
       position: relative;
+      @media screen and (max-width: 430px) {
+        display: none;
+      }
       img {
         position: absolute;
         z-index: -2;
@@ -371,6 +558,9 @@ body {
         @media screen and (max-width: 768px) {
           width: 400px;
           left: -402px;
+        }
+        @media screen and (max-width: 380px) {
+          width: 320px;
         }
       }
     }
@@ -392,11 +582,18 @@ body {
     background: url("../img/ultra-768-bg.jpg") no-repeat;
     background-size: cover;
   }
+  @media screen and (max-width: 430px) {
+    height: 670px;
+  }
   &__content {
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 100%;
+    @media screen and (max-width: 430px) {
+      flex-direction: column;
+      justify-content: space-around;
+    }
     &__left, &__right {
       background: #ffffff;
       height: 470px;
@@ -431,6 +628,9 @@ body {
       width: 400px;
       @media screen and (max-width: 768px) {
         width: 300px;
+      }
+      @media screen and (max-width: 430px) {
+        width: 280px;
       }
       img {
         @media screen and (max-width: 768px) {
@@ -505,6 +705,10 @@ body {
       padding-top: 40px;
       font-size: 24px;
     }
+    @media screen and (max-width: 380px) {
+      font-size: 22px;
+      margin: 0;
+    }
     svg {
       margin-right: 30px;
       @media screen and (max-width: 768px) {
@@ -515,6 +719,9 @@ body {
     @media screen and (max-width: 1440px) {
       padding-top: 40px;
       margin: 0 0 27px;
+    }
+    @media screen and (max-width: 430px) {
+      margin: 0 0 10px;
     }
   }
   &__content {
@@ -528,6 +735,13 @@ body {
     }
     @media screen and (max-width: 768px) {
       width: 700px;
+    }
+    @media screen and (max-width: 430px) {
+      width: 400px;
+      flex-direction: column;
+    }
+    @media screen and (max-width: 380px) {
+      width: 320px;
     }
     h4, p {
       color: #ffffff;
@@ -562,6 +776,9 @@ body {
         width: 300px;
         height: 315px;
         margin: 0 20px;
+      }
+      @media screen and (max-width: 430px) {
+        border-radius: 43px;
       }
         h3 {
           font-size: 30px;
@@ -663,6 +880,9 @@ body {
     background: url("../img/slipsrteam-768-bg.jpg") no-repeat;
     background-size: cover;
   }
+  @media screen and (max-width: 430px) {
+    height: 380px;
+  }
   &__content {
     display: flex;
     align-items: center;
@@ -670,6 +890,10 @@ body {
     padding-top: 45px;
     @media screen and (max-width: 1440px) {
       padding-top: 25px;
+    }
+    @media screen and (max-width: 430px) {
+      flex-direction: column;
+      padding-top: 10px;
     }
     &__left, &__right {
       width: 465px;
@@ -684,6 +908,9 @@ body {
         @media screen and (max-width: 768px) {
           font-size: 20px;
         }
+        @media screen and (max-width: 430px) {
+          margin: 10px 0;
+        }
       }
       p {
         font-size: 19px;
@@ -691,6 +918,10 @@ body {
         line-height: 25px;
         @media screen and (max-width: 768px) {
           font-size: 14px;
+        }
+        @media screen and (max-width: 430px) {
+          font-size: 10px;
+          line-height: 15px;
         }
       }
     }
@@ -703,6 +934,9 @@ body {
         margin: 25px 0;
         @media screen and (max-width: 768px) {
           font-size: 30px;
+        }
+        @media screen and (max-width: 430px) {
+          font-size: 20px;
         }
       }
       &__schedule {
@@ -755,6 +989,9 @@ body {
     background: url("../img/balance-768-bg.jpg") no-repeat;
     background-size: cover;
   }
+  @media screen and (max-width: 430px) {
+    height: 400px;
+  }
   &__content {
     width: 1300px;
     margin: 0 auto;
@@ -770,6 +1007,13 @@ body {
       width: 740px;
       padding-top: 50px;
     }
+    @media screen and (max-width: 430px) {
+      flex-direction: column;
+      width: 400px;
+    }
+    @media screen and (max-width: 380px) {
+      width: 320px;
+    }
     &__left, &__right {
       height: 250px;
       width: 500px;
@@ -780,6 +1024,9 @@ body {
     &__left {
       display: flex;
       align-items: center;
+      @media screen and (max-width: 430px) {
+        height: 200px;
+      }
     }
     &__right {
       font-weight: 700;
@@ -787,6 +1034,10 @@ body {
         font-size: 30px;
         @media screen and (max-width: 768px) {
           font-size: 20px;
+        }
+        @media screen and (max-width: 430px) {
+          text-align: center;
+          margin: 0 0 10px;
         }
       }
       p {
@@ -801,6 +1052,10 @@ body {
         justify-content: space-around;
         width: 180px;
         margin: 20px 0;
+        @media screen and (max-width: 430px) {
+          justify-content: center;
+          margin: 0 auto;
+        }
         div {
           width: 40px;
           height: 0;
@@ -824,6 +1079,9 @@ body {
     @media screen and (max-width: 500px) {
       font-size: 18px;
     }
+    @media screen and (max-width: 430px) {
+      font-size: 14px;
+    }
   }
   div {
     margin: 40px 0 0 0;
@@ -832,7 +1090,7 @@ body {
   svg {
     fill: $gyroColor;
     margin: 0 20px;
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 430px) {
       margin: 0 10px;
     }
   }
