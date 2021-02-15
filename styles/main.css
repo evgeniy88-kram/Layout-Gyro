@@ -782,7 +782,7 @@ body {
 @media screen and (max-width: 768px) {
   .ultra__content__left p, .ultra__content__right p {
     font-size: 14px;
-    line-height: 20px;
+    line-height: 19px;
     margin-top: 0;
   }
 }
