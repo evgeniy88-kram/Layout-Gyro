@@ -28,7 +28,7 @@ body {
     margin: 0 0 60px;
     @media screen and (max-width: 430px) {
       position: fixed;
-      height: 90px;
+      height: 70px;
       width: 100%;
       z-index: 7;
       background: $gyroColor;
@@ -93,7 +93,7 @@ body {
         display: block;
         position: absolute;
         z-index: 1;
-        top: 55px;
+        top: 45px;
         right: 30px;
       }
       span {
@@ -148,7 +148,7 @@ body {
     align-items: center;
     position: fixed;
     height: 280px;
-    top: 110px;
+    top: 90px;
     right: 0;
     left: 0;
     background: $gyroColor;
