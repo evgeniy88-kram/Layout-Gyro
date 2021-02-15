@@ -53,7 +53,12 @@ body {
 @media screen and (max-width: 430px) {
   .header__navbar--logo {
     top: -10px;
-    left: -110px;
+    left: -100px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .header__navbar--logo {
+    left: -80px;
   }
 }
 .header__navbar--logo span {
@@ -234,7 +239,8 @@ body {
 }
 @media screen and (max-width: 380px) {
   .header__content__left img {
-    left: -55px;
+    width: 300px;
+    left: -25px;
   }
 }
 .header__content__right {
@@ -317,8 +323,8 @@ body {
   width: 261px;
   height: 247px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 @media screen and (max-width: 1024px) {
   .header__content__right__img {
@@ -612,8 +618,8 @@ body {
 }
 .super__content__left__facts div:nth-child(2), .super__content__left__facts div:nth-child(3), .super__content__left__facts div:nth-child(4) {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   width: 230px;
   height: 145px;
@@ -1129,6 +1135,11 @@ body {
     width: 350px;
   }
 }
+@media screen and (max-width: 430px) {
+  .slipstream__content__left, .slipstream__content__right {
+    width: 300px;
+  }
+}
 .slipstream__content__left h3 {
   font-size: 30px;
   font-weight: 700;
@@ -1183,7 +1194,7 @@ body {
   justify-content: center;
 }
 .slipstream__content__right__schedule div:nth-child(1) img {
-  width: 290px;
+  width: 260px;
 }
 .slipstream__content__right__schedule div:nth-child(1) div {
   margin-right: 10px;
@@ -1278,6 +1289,11 @@ body {
     width: 350px;
   }
 }
+@media screen and (max-width: 430px) {
+  .balance__content__left, .balance__content__right {
+    width: 300px;
+  }
+}
 .balance__content__left {
   display: flex;
   align-items: center;
@@ -1311,6 +1327,12 @@ body {
 @media screen and (max-width: 1024px) {
   .balance__content__right p {
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .balance__content__right p {
+    text-align: center;
+    font-size: 12px;
   }
 }
 .balance__content__right__switch {

@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 $gyroColor: #FFCD00;
+@mixin flexCentrCentr () {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 body {
   margin: 0 auto !important;
   max-width: 1600px;
@@ -43,7 +48,10 @@ body {
       justify-content: space-between;
       @media screen and (max-width: 430px) {
         top: -10px;
-        left: -110px;
+        left: -100px;
+      }
+      @media screen and (max-width: 330px) {
+        left: -80px;
       }
       span {
         margin-left: 15px;
@@ -203,7 +211,8 @@ body {
           left: -45px;
         }
         @media screen and (max-width: 380px) {
-          left: -55px;
+          width: 300px;
+          left: -25px;
         }
       }
     }
@@ -244,9 +253,7 @@ body {
         width: 200px;
         height: 50px;
         border-radius: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flexCentrCentr;
         @media screen and (max-width: 768px) {
           width: 140px;
           height: 40px;
@@ -271,9 +278,7 @@ body {
         left: 55px;
         width: 261px;
         height: 247px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexCentrCentr;
         @media screen and (max-width: 1024px) {
           width: 211px;
           height: 200px;
@@ -375,9 +380,7 @@ body {
           width: 200px;
           height: 50px;
           border-radius: 25px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          @include flexCentrCentr;
           @media screen and (max-width: 768px) {
             width: 140px;
             height: 40px;
@@ -494,9 +497,7 @@ body {
           }
         }
         div:nth-child(2), div:nth-child(3), div:nth-child(4) {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include flexCentrCentr;
           flex-direction: column;
           width: 230px;
           height: 145px;
@@ -800,9 +801,7 @@ body {
         }
         div:nth-child(1) {
           background: #ffffff;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          @include flexCentrCentr;
           width: 170px;
           position: relative;
           @media screen and (max-width: 768px) {
@@ -848,9 +847,7 @@ body {
       }
       &__main + p {
         text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flexCentrCentr;
         color: #A4A4A4;
         font-size: 12px;
         font-weight: 400;
@@ -900,6 +897,9 @@ body {
       @media screen and (max-width: 768px) {
         width: 350px;
       }
+      @media screen and (max-width: 430px) {
+        width: 300px;
+      }
     }
     &__left {
       h3 {
@@ -944,7 +944,7 @@ body {
           display: flex;
           justify-content: center;
           img {
-            width: 290px;
+            width: 260px;
           }
           div {
             margin-right: 10px;
@@ -1020,6 +1020,9 @@ body {
       @media screen and (max-width: 768px) {
         width: 350px;
       }
+      @media screen and (max-width: 430px) {
+        width: 300px;
+      }
     }
     &__left {
       display: flex;
@@ -1045,6 +1048,10 @@ body {
         line-height: 25px;
         @media screen and (max-width: 1024px) {
           font-size: 14px;
+        }
+        @media screen and (max-width: 430px) {
+          text-align: center;
+          font-size: 12px;
         }
       }
       &__switch {
